@@ -1,0 +1,39 @@
+#navbar {
+    height: 75px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+    margin: auto;
+}
+
+.navbar-right {
+    width: 300px;
+}
+
+.navbar-right ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-right ul li, .navbar-left h2 {
+    color: white;
+}
+
+.navbar-right ul a li{
+    transition: ease-in-out 0.25s;
+}
+
+.navbar-right ul a li:hover {
+    color: rgb(113, 228, 226);
+}
