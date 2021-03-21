@@ -83,6 +83,8 @@
 .hero-section-content h1 {
     text-align: center;
     color: white;
+    padding-bottom: 5px;
+    border-bottom: 1px solid red;
 }
 
 .hero-section-content p {
@@ -93,20 +95,27 @@
 
 .mouse-icon {
     position: absolute;
-    bottom: 50px;
-    width: 35px;
+    bottom: 40px;
+    width: 125px;
     animation: 1s ease-out 0s 1 mouseFadeIn;
+    text-align: center;
 }
 
 img.mouse {
-    width: 100%;
+    width: 35px;
     animation: 2s ease-in-out 0s infinite moveMouseIcon;
-
 }
 
-.second-section {
+.mouse-icon p {
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    animation: 1s ease-out 0s 1 mouseFadeIn;
+    margin-top: 15px;
+}
+
+#second-section {
     height: 100%;
-    background-color: rgb(225, 48, 213);
     scroll-snap-align: start;
     background-image: url("images/coding2.jpg");
     background-size: cover;
@@ -114,7 +123,7 @@ img.mouse {
     background-attachment: fixed;
 }
 
-.third-section {
+#third-section {
     height: 100%;
     background-color: rgb(140, 238, 131);
     scroll-snap-align: start;
