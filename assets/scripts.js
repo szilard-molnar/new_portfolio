@@ -5,3 +5,10 @@ function snapDown() {
         behavior: 'smooth'
     });
 }
+
+function snapToTop() {
+    let firstSection = document.querySelector(".hero-section");
+    firstSection.scrollIntoView({
+        behavior: 'smooth'
+    });
+}

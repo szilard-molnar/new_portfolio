@@ -28,6 +28,10 @@
     margin: auto;
 }
 
+.navbar-left a h2{
+    transition: ease-in-out 0.25s;
+}
+
 .navbar-right {
     width: 300px;
 }
@@ -46,6 +50,6 @@
     transition: ease-in-out 0.25s;
 }
 
-.navbar-right ul a li:hover {
+.navbar-right ul a li:hover, .navbar-left a h2:hover {
     color: rgb(113, 228, 226);
 }
