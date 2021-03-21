@@ -11,21 +11,6 @@
     100% {
         background-position:96% 0%;
     }
-    /* 0% {
-        background: #7284A8;
-    }
-
-    33% {
-        background: #474954;
-    }
-
-    66% {
-        background: rgb(110, 113, 186);
-    }
-
-    100% {
-        background: rgb(57, 171, 184);
-    } */
 }
 
 @keyframes titleFadeInUp {
@@ -37,6 +22,30 @@
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes mouseFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes moveMouseIcon {
+    0% {
+        transform: translateY(10px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(10px);
     }
 }
 
@@ -56,6 +65,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .hero-section-content {
@@ -81,6 +91,19 @@
     color: white;
 }
 
+.mouse-icon {
+    position: absolute;
+    bottom: 50px;
+    width: 35px;
+    animation: 1s ease-out 0s 1 mouseFadeIn;
+}
+
+img.mouse {
+    width: 100%;
+    animation: 2s ease-in-out 0s infinite moveMouseIcon;
+
+}
+
 .second-section {
     height: 100%;
     background-color: rgb(225, 48, 213);
@@ -88,6 +111,7 @@
     background-image: url("images/coding2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .third-section {

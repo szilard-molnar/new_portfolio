@@ -17,6 +17,7 @@
     position: fixed;
     width: 100%;
     animation: 1s ease-out 0s 1 slideInFromTop;
+    z-index: 9999;
 }
 
 .navbar-content {
