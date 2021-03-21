@@ -12,3 +12,24 @@ function snapToTop() {
         behavior: 'smooth'
     });
 }
+
+function snapToAbout() {
+    let secondSection = document.querySelector("#second-section");
+    secondSection.scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+
+function snapToPortfolio() {
+    let thirdSection = document.querySelector("#third-section");
+    thirdSection.scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+
+function snapToContact() {
+    let fourthSection = document.querySelector("#fourth-section");
+    fourthSection.scrollIntoView({
+        behavior: 'smooth'
+    });
+}

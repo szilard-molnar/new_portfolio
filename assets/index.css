@@ -121,10 +121,29 @@ img.mouse {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#second-section h1 {
+    color: white;
 }
 
 #third-section {
     height: 100%;
     background-color: rgb(140, 238, 131);
     scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#fourth-section {
+    height: 100%;
+    background-color: rgb(131, 179, 238);
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
