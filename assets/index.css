@@ -17,6 +17,18 @@
     }
 }
 
+@keyframes titleFadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(125px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .container {
     scroll-snap-points-y: repeat(100vh);
     scroll-snap-type: y mandatory;
@@ -31,12 +43,23 @@
     animation-duration: 20s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section-content {
+    
+    animation: 1s ease-out 0s 1 titleFadeInUp;
 }
 
 .second-section {
     height: 100%;
     background-color: rgb(225, 48, 213);
     scroll-snap-align: start;
+    background-image: url("images/coding2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .third-section {
