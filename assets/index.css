@@ -57,11 +57,11 @@
 }
 
 .hero-section {
-    background: linear-gradient(81deg, rgb(52, 175, 196), #0496c2, rgb(115, 105, 225), rgb(57, 171, 184));
+    background: linear-gradient(81deg, rgb(52, 175, 196), rgb(146, 137, 245),rgb(81, 13, 148), #0496c2, rgb(115, 105, 225), rgb(57, 171, 184));
     background-size: 800% 800%; 
     height: 100%;
     scroll-snap-align: start;
-    animation: backgroundColorPalette 20s ease infinite;
+    animation: backgroundColorPalette 30s ease infinite;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,7 +70,7 @@
 
 .hero-section-content {
     background-color: rgba(255, 255, 255, 0.16);
-    animation: 1s ease-out 0s 1 titleFadeInUp;
+    animation: 1.5s ease-in-out 0s 1 titleFadeInUp;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,11 +93,11 @@
     color: white;
 }
 
-.mouse-icon {
+.mouse-icon, .down-arrow {
     position: absolute;
-    bottom: 40px;
+    bottom: 20px;
     width: 125px;
-    animation: 1s ease-out 0s 1 mouseFadeIn;
+    animation: 1.5s ease-out 0s 1 mouseFadeIn;
     text-align: center;
 }
 
@@ -106,11 +106,16 @@ img.mouse {
     animation: 2s ease-in-out 0s infinite moveMouseIcon;
 }
 
-.mouse-icon p {
+img.arrowDown {
+    width: 25px;
+    animation: 2s ease-in-out 0s infinite moveMouseIcon;
+}
+
+.mouse-icon p,  .down-arrow p{
     color: white;
     text-align: center;
     font-size: 12px;
-    animation: 1s ease-out 0s 1 mouseFadeIn;
+    animation: 1.5s ease-out 0s 1 mouseFadeIn;
     margin-top: 15px;
 }
 
@@ -124,6 +129,7 @@ img.mouse {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 #second-section h1 {
@@ -141,9 +147,17 @@ img.mouse {
 
 #fourth-section {
     height: 100%;
-    background-color: rgb(131, 179, 238);
+    background: linear-gradient(0deg, rgba(0,0,0,0.25), rgba(0, 33, 142, 0.6) ), url(images/contact.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
     scroll-snap-align: start;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.navbar-colored{
+    background-color: white!important;
 }
