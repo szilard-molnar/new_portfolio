@@ -1,8 +1,3 @@
-if(window.scrollTop() >= 200)
-{
-    document.querySelector("#navbar").classList.add("navbar-colored");
-}
-
 // When user clicks the mouse icon, it snaps down to the next section
 function snapDown() {
     let secondSection = document.getElementById("second-section");
@@ -38,3 +33,17 @@ function snapToContact() {
         behavior: 'smooth'
     });
 }
+
+let navBar = document.querySelector("nav");
+window.addEventListener("scroll", function(e) {
+    e.preventDefault();
+    if(window.scrollTop <= 200) {
+        // navBar.classList.remove("navbar-transparent");
+        navBar.classList.add("navbar-colored");
+    }
+    else if(window.scrollTop > 200)
+    {
+        navBar.classList.remove("navbar-colored");
+        // navBar.classList.add("navbar-transparent");
+    }
+});

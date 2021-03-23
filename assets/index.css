@@ -1,5 +1,29 @@
 /* Home Page styiling */
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-75px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
 @keyframes backgroundColorPalette {
+    0% { 
+        background-position: 96% 0%;
+    }
+
+    50% {
+        background-position:5% 100%;
+    }
+
+    100% {
+        background-position:96% 0%;
+    }
+}
+
+@keyframes portfolioColorPalette {
     0% { 
         background-position: 96% 0%;
     }
@@ -49,6 +73,51 @@
     }
 }
 
+#navbar {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    animation: 1.5s ease-out 0s 1 slideInFromTop;
+    z-index: 9999;
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75%;
+    margin: auto;
+}
+
+.navbar-left a h2{
+    transition: ease-in-out 0.25s;
+}
+
+.navbar-right {
+    width: 300px;
+}
+
+.navbar-right ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-right ul li, .navbar-left h2 {
+    color: white;
+}
+
+.navbar-right ul a li{
+    transition: ease-in-out 0.25s;
+}
+
+.navbar-right ul a li:hover, .navbar-left a h2:hover {
+    color: rgb(113, 228, 226);
+}
+
 .container {
     scroll-snap-points-y: repeat(100vh);
     scroll-snap-type: y mandatory;
@@ -93,7 +162,7 @@
     color: white;
 }
 
-.mouse-icon, .down-arrow {
+.mouse-icon {
     position: absolute;
     bottom: 20px;
     width: 125px;
@@ -106,12 +175,7 @@ img.mouse {
     animation: 2s ease-in-out 0s infinite moveMouseIcon;
 }
 
-img.arrowDown {
-    width: 25px;
-    animation: 2s ease-in-out 0s infinite moveMouseIcon;
-}
-
-.mouse-icon p,  .down-arrow p{
+.mouse-icon p {
     color: white;
     text-align: center;
     font-size: 12px;
@@ -138,11 +202,13 @@ img.arrowDown {
 
 #third-section {
     height: 100%;
-    background-color: rgb(140, 238, 131);
+    background: linear-gradient(200deg, #FB5012, #01FDF6, #CBBAED, #E9DF00, #03FCBA);
+    background-size: 800% 800%; 
     scroll-snap-align: start;
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: portfolioColorPalette 30s ease infinite;
 }
 
 #fourth-section {
@@ -160,4 +226,8 @@ img.arrowDown {
 
 .navbar-colored{
     background-color: white!important;
+}
+
+.navbar-transparent {
+    background-color: transparent;
 }
