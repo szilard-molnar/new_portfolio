@@ -34,6 +34,32 @@ function snapToContact() {
     });
 }
 
+// functionality to pull off different animations on project chards
+let centerCard = document.getElementById("card-2");
+let rect = centerCard.getBoundingClientRect();
+let viewWidth = window.innerWidth;
+let viewHeight = window.innerHeight;
+
+function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+
+    );
+}
+
+document.addEventListener("scroll", function() {
+    if(isInViewport(centerCard)) {
+        console.log("true");
+    } else {
+        console.log("false");
+    }
+});
+///////////////////////////////////////////////////////////////////
+
 let navBar = document.querySelector("nav");
 window.addEventListener("scroll", function(e) {
     e.preventDefault();
