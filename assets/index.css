@@ -73,6 +73,16 @@
     }
 }
 
+@keyframes navbarChange {
+    0% {
+        background-color: transparent;
+    }
+
+    100% {
+        background-color: white;
+    }
+}
+
 @keyframes centerCard {
     0% {
         opacity: 0;
@@ -132,17 +142,13 @@
 }
 
 .container {
-    scroll-snap-points-y: repeat(100vh);
-    scroll-snap-type: y mandatory;
     height: 100vh;
-    overflow-y: scroll;
 }
 
 .hero-section {
     background: linear-gradient(81deg, rgb(52, 175, 196), rgb(146, 137, 245),rgb(81, 13, 148), #0496c2, rgb(115, 105, 225), rgb(57, 171, 184));
     background-size: 800% 800%; 
     height: 100%;
-    scroll-snap-align: start;
     animation: backgroundColorPalette 30s ease infinite;
     display: flex;
     align-items: center;
@@ -230,7 +236,6 @@ img.mouse {
 
 #second-section {
     height: 100%;
-    scroll-snap-align: start;
     background-image: url("images/coding2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -249,7 +254,6 @@ img.mouse {
     height: 100%;
     background: linear-gradient(200deg, #FB5012, #01FDF6, #CBBAED, #E9DF00, #03FCBA);
     background-size: 800% 800%; 
-    scroll-snap-align: start;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -263,18 +267,30 @@ img.mouse {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    scroll-snap-align: start;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .navbar-colored{
-    background-color: white!important;
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+}
+
+.navbar-colored-text {
+    color: black!important;
+    border-bottom: 1px solid red;
+    transition: 0.5s;
+}
+
+.navbar-colored-text:hover {
+    color: rgb(0, 17, 114)!important;
 }
 
 .navbar-transparent {
     background-color: transparent;
+    transition: 0.5s;
 }
 
 /*// cards css below //*/

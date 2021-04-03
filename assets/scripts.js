@@ -35,41 +35,37 @@ function snapToContact() {
 }
 
 // functionality to pull off different animations on project chards
-let centerCard = document.getElementById("card-2");
-let rect = centerCard.getBoundingClientRect();
-let viewWidth = window.innerWidth;
-let viewHeight = window.innerHeight;
-
-function isInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-
-    );
+function checkCards() {
+    let centerCard = document.getElementById("card-2");
+    let bounding = centerCard.getBoundingClientRect();
+    
+    if(bounding.top >= 0 && bounding.left >= 0 && bounding.right <= (window.innerWidth || document.documentElement.clientWidth) && bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+        
+    }
 }
 
 document.addEventListener("scroll", function() {
-    if(isInViewport(centerCard)) {
-        console.log("true");
-    } else {
-        console.log("false");
-    }
+    checkCards();
 });
-///////////////////////////////////////////////////////////////////
 
-let navBar = document.querySelector("nav");
-window.addEventListener("scroll", function(e) {
-    e.preventDefault();
-    if(window.scrollTop <= 200) {
-        // navBar.classList.remove("navbar-transparent");
+///////////////////////////////////////////////////////////////////
+function changeNavBar() {
+    let navBar = document.querySelector("nav");
+    if(window.scrollY >= window.innerHeight) {
+        navBar.classList.remove("navbar-transparent");
         navBar.classList.add("navbar-colored");
+        document.querySelector(".navbar-left a h2").classList.add("navbar-colored-text");
+        document.querySelector(".navbar-right ul li").classList.add("navbar-colored-text");
     }
-    else if(window.scrollTop > 200)
+    else if(window.scrollY < window.innerHeight)
     {
         navBar.classList.remove("navbar-colored");
-        // navBar.classList.add("navbar-transparent");
+        navBar.classList.add("navbar-transparent");
+        document.querySelector(".navbar-left a h2").classList.remove("navbar-colored-text");
+        document.querySelector(".navbar-right ul li").classList.remove("navbar-colored-text");
     }
+}
+
+window.addEventListener("scroll", function() {
+    changeNavBar();
 });
