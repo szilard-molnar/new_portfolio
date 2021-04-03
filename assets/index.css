@@ -86,14 +86,52 @@
 @keyframes centerCard {
     0% {
         opacity: 0;
+        width: 0;
+        height: 0;
     }
 
     100% {
         opacity: 1;
+        width: 250px;
+        height: 350px;
     }
 }
-.center-card-fade-in {
-    animation: centerCard 5s;
+.center-card-comes-in {
+    animation: centerCard 1s;
+}
+
+@keyframes rightCard {
+    0% {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.right-card-comes-in {
+    animation: rightCard 1s;
+}
+
+@keyframes leftCard {
+    0% {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.left-card-comes-in {
+    animation: leftCard 1s;
+}
+
+.not-visible {
+    opacity: 0;
 }
 
 #navbar {

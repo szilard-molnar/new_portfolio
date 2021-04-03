@@ -37,10 +37,20 @@ function snapToContact() {
 // functionality to pull off different animations on project chards
 function checkCards() {
     let centerCard = document.getElementById("card-2");
+    let rightCard = document.getElementById("card-3"); 
+    let leftCard = document.getElementById("card-1");
+
     let bounding = centerCard.getBoundingClientRect();
     
     if(bounding.top >= 0 && bounding.left >= 0 && bounding.right <= (window.innerWidth || document.documentElement.clientWidth) && bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
-        
+        centerCard.classList.add("center-card-comes-in");
+        centerCard.classList.remove("not-visible");
+
+        rightCard.classList.add("right-card-comes-in");
+        rightCard.classList.remove("not-visible");
+
+        leftCard.classList.add("left-card-comes-in");
+        leftCard.classList.remove("not-visible");
     }
 }
 
