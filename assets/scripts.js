@@ -54,15 +54,19 @@ function changeNavBar() {
     if(window.scrollY >= window.innerHeight) {
         navBar.classList.remove("navbar-transparent");
         navBar.classList.add("navbar-colored");
-        document.querySelector(".navbar-left a h2").classList.add("navbar-colored-text");
-        document.querySelector(".navbar-right ul li").classList.add("navbar-colored-text");
+        document.querySelector(".navbar-left h2").classList.add("navbar-colored-text");
+        document.querySelector("#about-link").classList.add("navbar-colored-text");
+        document.querySelector("#portfolio-link").classList.add("navbar-colored-text");
+        document.querySelector("#contact-link").classList.add("navbar-colored-text");
     }
     else if(window.scrollY < window.innerHeight)
     {
         navBar.classList.remove("navbar-colored");
         navBar.classList.add("navbar-transparent");
-        document.querySelector(".navbar-left a h2").classList.remove("navbar-colored-text");
-        document.querySelector(".navbar-right ul li").classList.remove("navbar-colored-text");
+        document.querySelector(".navbar-left h2").classList.remove("navbar-colored-text");
+        document.querySelector("#about-link").classList.remove("navbar-colored-text");
+        document.querySelector("#portfolio-link").classList.remove("navbar-colored-text");
+        document.querySelector("#contact-link").classList.remove("navbar-colored-text");
     }
 }
 
