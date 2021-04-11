@@ -40,6 +40,9 @@ function checkCards() {
     let rightCard = document.getElementById("card-3"); 
     let leftCard = document.getElementById("card-1");
 
+    let yellowCircle = document.querySelector(".circle-1");
+    let blueCircle = document.querySelector(".circle-2");
+
     let bounding = centerCard.getBoundingClientRect();
     
     if(bounding.top >= 0 && bounding.left >= 0 && bounding.right <= (window.innerWidth || document.documentElement.clientWidth) && bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
@@ -51,6 +54,12 @@ function checkCards() {
 
         leftCard.classList.add("left-card-comes-in");
         leftCard.classList.remove("not-visible");
+
+        yellowCircle.classList.add("yellow-circle-come-in");
+        yellowCircle.classList.remove("not-visible");
+
+        blueCircle.classList.add("blue-circle-come-in");
+        blueCircle.classList.remove("not-visible");
     }
 }
 
