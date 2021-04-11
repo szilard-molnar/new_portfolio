@@ -279,6 +279,7 @@ img.mouse {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgb(23, 23, 97);
 }
 
 #fourth-section {
@@ -322,6 +323,22 @@ img.mouse {
     align-items: center;
     justify-items: center;
     column-gap: 50px;
+    position: relative;
+}
+
+.circle-1 {
+    position: absolute;
+    background-color: red;
+    height: 200px;
+    width: 200px;
+
+}
+
+.circle-2 {
+    position: absolute;
+    background-color: blue;
+    height: 300px;
+    width: 300px;
 }
 
 .card {
@@ -330,7 +347,7 @@ img.mouse {
     box-shadow: 20px 20px 50px 0 rgb(5, 5, 113);
     border-radius: 15px;
     position: relative;
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.5);
     overflow: hidden;
     border-top: 2px solid rgb(5, 5, 113);
     border-left: 2px solid rgb(5, 5, 113);
