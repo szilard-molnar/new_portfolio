@@ -11,21 +11,21 @@
 
 @keyframes yellowCircle {
     0% {
-        transform: translateY(-150px);
+        transform: translate(-150px, -150px);
         opacity: 0;
     }
     100% {
-        transform: translateY(0);
+        transform: translate(0);
         opacity: 1;
     }
 }
 .yellow-circle-come-in {
-    animation: 1.5s ease-out 0s 1 yellowCircle;
+    animation: 1s ease-in-out 0s 1 yellowCircle;
 }
 
 @keyframes blueCircle {
     0% {
-        transform: translateY(150px);
+        transform: translate(150px, 150px);
         opacity: 0;
     }
     100% {
@@ -34,7 +34,7 @@
     }
 }
 .blue-circle-come-in {
-    animation: 1.5s ease-out 0s 1 blueCircle;
+    animation: 1s ease-in-out 0s 1 blueCircle;
 }
 
 @keyframes backgroundColorPalette {
